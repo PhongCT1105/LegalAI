@@ -23,7 +23,7 @@ const LandingPage: React.FC = () => {
           <p className="text-lg text-gray-600 mb-8 max-w-md text-center">
             A cost-efficient Legal AI system integrating Mixture-of-Experts (MoE) &amp; RAG for reliable legal assistance.
           </p>
-          <Link to="/try-demo">
+          <Link to="/baseline">
             <button className="py-3 px-6 rounded-md bg-[#A27D5C] text-white hover:bg-[#8C6245] transition font-medium">
               Try Demo
             </button>
