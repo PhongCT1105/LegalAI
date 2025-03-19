@@ -18,7 +18,7 @@ const LandingPage: React.FC = () => {
         {/* Left Side: Try Demo Section */}
         <div className="flex flex-col justify-center items-center w-full lg:w-1/2 px-8 py-16 bg-white">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-center">
-            Your ideas, amplified
+            Optimized Legal AI 
           </h1>
           <p className="text-lg text-gray-600 mb-8 max-w-md text-center">
             A cost-efficient Legal AI system integrating Mixture-of-Experts (MoE) &amp; RAG for reliable legal assistance.
@@ -34,7 +34,7 @@ const LandingPage: React.FC = () => {
         <div className="hidden lg:flex flex-col justify-center items-center w-1/2 px-8 py-16 bg-[#F5F3EE]">
           <div className="bg-white shadow-lg rounded-lg w-full max-w-md p-6">
             <p className="font-medium text-gray-700 text-center">
-              Hi there! Ask me anything about Legal AI or the project.
+              Hi there! How can I assist you with legal AI today?
             </p>
           </div>
         </div>
@@ -127,9 +127,9 @@ const LandingPage: React.FC = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-white py-6 border-t border-gray-200 text-center">
+      <footer className="bg-black py-6 border-t border-gray-200 text-center">
         <p className="text-gray-500 text-sm">
-          &copy; {new Date().getFullYear()} Legal AI Research. All rights reserved.
+          &copy; {new Date().getFullYear()} Cost-efficient Legal AI system integrating Mixture-of-Experts (MoE) & RAG for reliable legal assistance Research by Phong Cao. All rights reserved.
         </p>
       </footer>
     </div>
