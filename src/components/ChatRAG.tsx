@@ -1,44 +1,43 @@
 import React, { useState } from "react";
 
 const ChatRAG: React.FC = () => {
-  const [query, setQuery] = useState("");
+  const [query] = useState("");
   const [messages, setMessages] = useState<{ role: string; text: string }[]>([]);
-  const [cases, setCases] = useState<any[]>([]);
+  const [cases] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
-  const [chatMode, setChatMode] = useState(false);
 
-  // Handle user submitting query
-  const handleSearch = async () => {
-    if (!query.trim()) return;
+  // // Handle user submitting query
+  // const handleSearch = async () => {
+  //   if (!query.trim()) return;
     
-    // Switch UI to Chat Mode
-    setChatMode(true);
-    setLoading(true);
+  //   // Switch UI to Chat Mode
+  //   setChatMode(true);
+  //   setLoading(true);
 
-    // Add user's query to chat history
-    setMessages([{ role: "user", text: query }]);
+  //   // Add user's query to chat history
+  //   setMessages([{ role: "user", text: query }]);
 
-    try {
-      // Fetch AI response (Replace with actual API)
-      const chatResponse = await fetch(`https://api.legalai.com/chat?q=${encodeURIComponent(query)}`);
-      const chatData = await chatResponse.json();
+  //   try {
+  //     // Fetch AI response (Replace with actual API)
+  //     const chatResponse = await fetch(`https://api.legalai.com/chat?q=${encodeURIComponent(query)}`);
+  //     const chatData = await chatResponse.json();
 
-      // Fetch relevant cases (Replace with actual API)
-      const casesResponse = await fetch(`https://api.legalai.com/retrieve-cases?q=${encodeURIComponent(query)}`);
-      const casesData = await casesResponse.json();
+  //     // Fetch relevant cases (Replace with actual API)
+  //     const casesResponse = await fetch(`https://api.legalai.com/retrieve-cases?q=${encodeURIComponent(query)}`);
+  //     const casesData = await casesResponse.json();
 
-      // Append AI response to chat
-      setMessages((prev) => [...prev, { role: "ai", text: chatData.response }]);
+  //     // Append AI response to chat
+  //     setMessages((prev) => [...prev, { role: "ai", text: chatData.response }]);
 
-      // Store relevant cases
-      setCases(casesData?.cases || []);
-    } catch (error) {
-      setMessages((prev) => [...prev, { role: "ai", text: "Error retrieving response. Please try again." }]);
-      setCases([]);
-    } finally {
-      setLoading(false);
-    }
-  };
+  //     // Store relevant cases
+  //     setCases(casesData?.cases || []);
+  //   } catch (error) {
+  //     setMessages((prev) => [...prev, { role: "ai", text: "Error retrieving response. Please try again." }]);
+  //     setCases([]);
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
 
   // Handle follow-up questions
   const handleFollowUp = async (newQuery: string) => {
